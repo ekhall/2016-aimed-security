@@ -1,11 +1,18 @@
-#+REVEAL_ROOT: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0
+#+REVEAL_ROOT: file:///reveal.js
 #+REVEAL_TRANS: linear
 #+REVEAL_THEME: blood
+#+REVEAL_PLUGINS: notes:t
 #+OPTIONS: reveal_title_slide:nil toc:nil num:nil
 
 * Monolithic to Microservices
-Cloud Computing and Data Security
-
+Cloud Computing and Data Security,
 AIMed 2016
 
-[E. Kevin Hall](https://ekhall.gitlab.io)1
+E. Kevin Hall 
+
+https://ekhall.gitlab.io
+
+* Test
+#+BEGIN_NOTES
+These are speaker notes
+#+END_NOTES
