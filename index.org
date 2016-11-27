@@ -1,4 +1,4 @@
-#+REVEAL_ROOT: file:///reveal.js
+#+REVEAL_ROOT: ./reveal.js
 #+REVEAL_TRANS: linear
 #+REVEAL_THEME: blood
 #+REVEAL_PLUGINS: notes:t
