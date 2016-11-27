@@ -14,5 +14,5 @@ https://ekhall.gitlab.io
 
 * Test
 #+BEGIN_NOTES
-These are speaker notes
+These are speaker notes...
 #+END_NOTES
