@@ -4,15 +4,94 @@
 #+REVEAL_PLUGINS: notes:t
 #+OPTIONS: reveal_title_slide:nil toc:nil num:nil
 
-* Monolithic to Microservices
+* Monolithic to Microservice
 Cloud Computing and Data Security,
 AIMed 2016
 
-E. Kevin Hall 
+E. Kevin Hall, M.D.
+
+Yale University 
 
 https://ekhall.gitlab.io
 
-* Test
+* Disclosure
+Founder, Archetyp Mobility
+
+www.archetyp.io
+
+*** This Stuff is Real
+Data Breaches are Real. 
+ 
+The last 12 months have seen significant breaches.
+
 #+BEGIN_NOTES
-These are speaker notes...
+Hardly necessary to start with this.
+#+END_NOTES
+
+*** We're Failing
+/"Despite being the most at-risk and perpetually breached critical infrastructure sector in the Nation, virtually all health sector organizations refuse to evolve their layered security to combat a hyper evolving threat landscape..."/ 
+
+*** We're Failing 
+/"As a result, when a healthcare system is breached and patient records are stolen, the entire brutal impact of the incident that resulted from poor cybersecurity on behalf of the healthcare organization is forced onto the shoulders of the victim to deal with for the rest of their life."/
+
+- 2016, Institute for Critical Infrastructure Technology (ICIT)
+
+*** 2016 # Breaches with PHI or Health Info
+#+ATTR_HTML: :width 65% :height 65%
+[[./resources/2016-incidents-phi-healthinfo.png]]
+
+(from Protenus.com)
+
+#+BEGIN_NOTES
+1. But Breaches Do Continue!
+2. There were a greater number of breaches in the second half of 2016 than the first.  Avg 25/mo vs 36.
+#+END_NOTES
+
+*** 2016 # of Records Breached
+#+ATTR_HTML: :width 65% :height 65%
+[[./resources/2016-records-breached.png]]
+
+(from Protenus.com)
+
+*** Notable Breaches this Year
+- WADA cracked by Russian Espionage Group 'Fancy Bear', includes Olympic Athletes.
+- Tunisian government inserted keyloggers between users and Facebook.
+- We discovered 500m Yahoo records stolen in 2014 by suspected Nation State.
+  
+*** Safety vs. Freedom 
+#+BEGIN_NOTES
+We begin the discussion with some fundamental corollaries. Let us recognize:
+
+(More about Diginotar)
+#+END_NOTES
+
+Every discussion of security eventually boils down to balance between security and freedom.
+
+Each product or effort solidifies limits at the expense of freedoms and enables freedoms at the expense of limits. 
+
+*(Excluding mistakes and bad design)*
+
+*** The Structure is Changing   
+#+BEGIN_NOTES
+On top of the complexities of sound and appropriate security design...
+#+END_NOTES
+
+From _Monolith to Microservice_.
+
+This is affecting primary security practices.
+
+*** What is a Monolith?
+A Monolithic Architecture is one where functionally separate software services are interwoven.
+
+In the past the practice was to buy hardware and run the full software stack on those machines.
+
+In many cases we've moved services to the cloud, but frequently the architecture is still monolithic.
+ 
+#+BEGIN_NOTES
+Monolith: the front end, back end database, logic, interfaces with other functions. All local.
+#+END_NOTES
+
+*** What are Microservices?
+
+#+BEGIN_NOTES
 #+END_NOTES

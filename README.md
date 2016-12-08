@@ -1,4 +1,4 @@
-# AIMed 2016 Cloud Computing and Data Security Lecture
+# AIMed 2016 Cloud Computing and Data Security
 ## Info
 * E. Kevin Hall ([about](https://ekhall.gitlab.io/))
 * Date: 27 November, 2016
