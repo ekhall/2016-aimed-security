@@ -14,7 +14,7 @@ Yale University
 
 https://ekhall.gitlab.io
 
-* Disclosure
+** Disclosure
 Founder, Archetyp Mobility
 
 www.archetyp.io
@@ -28,13 +28,13 @@ The last 12 months have seen significant breaches.
 Hardly necessary to start with this.
 #+END_NOTES
 
-*** We're Failing
+*** 2016 ICIT Report (1/2)
 /"Despite being the most at-risk and perpetually breached critical infrastructure sector in the Nation, virtually all health sector organizations refuse to evolve their layered security to combat a hyper evolving threat landscape..."/ 
 
-*** We're Failing 
+*** 2016 ICIT Report (2/2)
 /"As a result, when a healthcare system is breached and patient records are stolen, the entire brutal impact of the incident that resulted from poor cybersecurity on behalf of the healthcare organization is forced onto the shoulders of the victim to deal with for the rest of their life."/
 
-- 2016, Institute for Critical Infrastructure Technology (ICIT)
+- 2016, Institute for Critical Infrastructure Technology
 
 *** 2016 # Breaches with PHI or Health Info
 #+ATTR_HTML: :width 65% :height 65%
@@ -54,15 +54,23 @@ Hardly necessary to start with this.
 (from Protenus.com)
 
 *** Notable Breaches this Year
-- WADA cracked by Russian Espionage Group 'Fancy Bear', includes Olympic Athletes.
-- Tunisian government inserted keyloggers between users and Facebook.
-- We discovered 500m Yahoo records stolen in 2014 by suspected Nation State.
-  
+WADA cracked by Russian Espionage Group 'Fancy Bear', includes Olympic Athletes.
+
+Tunisian government inserted keyloggers between users and Facebook.
+
+(2014) We discovered 500m Yahoo records stolen in 2014 by suspected Nation State.
+
+(2012) We discovered 68m Dropbox records hacked in 2012 - only half upgraded.
+
+#+BEGIN_NOTES
+- This year or discovered this year.
+- Dropbox: Half were encrypted with SHA, newer half with Blowfish Bcrypt - important lesson for those of us slowly upgrading services piecemeal.  
+#+END_NOTES
+
 *** Safety vs. Freedom 
 #+BEGIN_NOTES
 We begin the discussion with some fundamental corollaries. Let us recognize:
 
-(More about Diginotar)
 #+END_NOTES
 
 Every discussion of security eventually boils down to balance between security and freedom.
@@ -78,7 +86,7 @@ On top of the complexities of sound and appropriate security design...
 
 From _Monolith to Microservice_.
 
-This is affecting primary security practices.
+This change is fundamentally affecting primary security practices.
 
 *** What is a Monolith?
 A Monolithic Architecture is one where functionally separate software services are interwoven.
@@ -88,6 +96,8 @@ In the past the practice was to buy hardware and run the full software stack on 
 In many cases we've moved services to the cloud, but frequently the architecture is still monolithic.
  
 #+BEGIN_NOTES
+First - what is a monolith?
+
 Monolith: the front end, back end database, logic, interfaces with other functions. All local.
 #+END_NOTES
 
