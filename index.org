@@ -182,10 +182,48 @@ For 5 people, productivity better with monolith. For 500 people, likely monolith
 #+END_NOTES
 
 ** Security Implications
-*With a monolith* - when you break into the monolith one has access to the whole system. Can say anything to the database.
+*With a monolith* - a security breach into the monolith one has access to the whole system. Can say anything to the database.
 
 *With a microservces approach*, more agility:
   - Can have some parts high-security risk and some low-risk.
   - Can innovate really quickly in user experience and personalization.
   - No need to have whole system with PCI or HIPAA compliance, most of app can be extremely agile and innovative. 
   - Tight control over narrow attack surface.
+
+** Security Recommendations
+1. Encrypt data in transit and at rest
+2. Automate configuration and policy management
+3. Segment and isolate applications and services
+
+#+BEGIN_NOTES
+1. Remember, what was once interprocess communication are now network calls. Keep certficates up to date, fix SSL issues, manage software versions well.
+2. Complex functions across disparate systems lead to the most common error: human. Separating development and administrative roles and go long way to reduce errors.
+3. Most will isolate dev from prod, but can also govern interactions between services.
+#+END_NOTES
+
+** Kerckhoff's Principle
+"The enemy knows the system" (Shannon)
+
+Your security shoun'd /rely/ on your architecture being hidden, but you don't need to expose it.
+
+** Graham Lea's Questions (Core)
+
+#+BEGIN_NOTES
+http://www.grahamlea.com/2015/07/microservices-security-questions/
+#+END_NOTES
+
+** Resources
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+- Netflix: http://techblog.netflix.com/search/label/security
+- Sam Newman: Building Microservices, O'Reilly
+- Troy Hunt Blog: https://www.troyhunt.com
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 25%">
+[[./resources/book.jpg]]
+#+REVEAL_HTML: </div>
+
+#+BEGIN_NOTES
+Because of these maxim's, it can be difficult to find what people are doing with microservice security - few talking.
+#+END_NOTES
