@@ -9,7 +9,7 @@
 </style>
 <link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
 
-<link rel="stylesheet" href="./reveal.js/css/theme/blood.css" id="theme"/>
+<link rel="stylesheet" href="./reveal.js/css/theme/night.css" id="theme"/>
 
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -28,8 +28,8 @@
 <div class="slides">
 
 <section>
-<section id="slide-org98202b6">
-<h2 id="org98202b6">Monolithic to Microservice</h2>
+<section id="slide-orgaa40539">
+<h2 id="orgaa40539">Monolithic to Microservice</h2>
 <p>
 Cloud Computing and Data Security,
 AIMed 2016
@@ -48,8 +48,8 @@ Yale University
 </p>
 
 </section>
-<section id="slide-orgf9575fc">
-<h3 id="orgf9575fc">Disclosure</h3>
+<section id="slide-orgc8224d5">
+<h3 id="orgc8224d5">Disclosure</h3>
 <p>
 Founder, Archetyp Mobility
 </p>
@@ -59,12 +59,8 @@ www.archetyp.io
 </p>
 
 </section>
-<section id="slide-orge4ce788">
-<h4 id="orge4ce788">This Stuff is Real</h4>
-<p>
-Data Breaches are Real. 
-</p>
-
+<section id="slide-orgb4c4dae">
+<h3 id="orgb4c4dae">Data Breaches are Very Real</h3>
 <p>
 The last 12 months have seen significant breaches.
 </p>
@@ -77,15 +73,15 @@ Hardly necessary to start with this.
 </aside>
 
 </section>
-<section id="slide-org0127773">
-<h4 id="org0127773">2016 ICIT Report (1/2)</h4>
+<section id="slide-org5a03d8f">
+<h3 id="org5a03d8f">2016 ICIT Report (1/2)</h3>
 <p>
 <i>"Despite being the most at-risk and perpetually breached critical infrastructure sector in the Nation, virtually all health sector organizations refuse to evolve their layered security to combat a hyper evolving threat landscape&#x2026;"</i> 
 </p>
 
 </section>
-<section id="slide-orgdb17a15">
-<h4 id="orgdb17a15">2016 ICIT Report (2/2)</h4>
+<section id="slide-orge6b9f1f">
+<h3 id="orge6b9f1f">2016 ICIT Report (2/2)</h3>
 <p>
 <i>"As a result, when a healthcare system is breached and patient records are stolen, the entire brutal impact of the incident that resulted from poor cybersecurity on behalf of the healthcare organization is forced onto the shoulders of the victim to deal with for the rest of their life."</i>
 </p>
@@ -96,8 +92,8 @@ Hardly necessary to start with this.
 </ul>
 
 </section>
-<section id="slide-org192e612">
-<h4 id="org192e612">2016 # Breaches with PHI or Health Info</h4>
+<section id="slide-org5749016">
+<h3 id="org5749016">2016 # Breaches with PHI or Health Info</h3>
 
 <div class="figure">
 <p><img src="./resources/2016-incidents-phi-healthinfo.png" alt="2016-incidents-phi-healthinfo.png" width="65%" height="65%" />
@@ -118,8 +114,8 @@ Hardly necessary to start with this.
 </aside>
 
 </section>
-<section id="slide-org78024d0">
-<h4 id="org78024d0">2016 # of Records Breached</h4>
+<section id="slide-org44fd06b">
+<h3 id="org44fd06b">2016 # of Records Breached</h3>
 
 <div class="figure">
 <p><img src="./resources/2016-records-breached.png" alt="2016-records-breached.png" width="65%" height="65%" />
@@ -131,23 +127,18 @@ Hardly necessary to start with this.
 </p>
 
 </section>
-<section id="slide-org930b14a">
-<h4 id="org930b14a">Notable Breaches this Year</h4>
-<p>
-WADA cracked by Russian Espionage Group 'Fancy Bear', includes Olympic Athletes.
-</p>
+<section id="slide-org4909b02">
+<h3 id="org4909b02">Notable Breaches this Year</h3>
+<ul>
+<li>WADA cracked by Russian Espionage Group 'Fancy Bear', includes Olympic Athletes.</li>
 
-<p>
-Tunisian government inserted keyloggers between users and Facebook.
-</p>
+<li>Tunisian government inserted keyloggers between users and Facebook.</li>
 
-<p>
-(2014) We discovered 500m Yahoo records stolen in 2014 by suspected Nation State.
-</p>
+<li>(2014) We discovered 500m Yahoo records stolen in 2014 by suspected Nation State.</li>
 
-<p>
-(2012) We discovered 68m Dropbox records hacked in 2012 - only half upgraded.
-</p>
+<li>(2012) We discovered 68m Dropbox records hacked in 2012 - only half upgraded.</li>
+
+</ul>
 
 <aside class="notes">
 <ul>
@@ -159,8 +150,8 @@ Tunisian government inserted keyloggers between users and Facebook.
 </aside>
 
 </section>
-<section id="slide-orge7fbca4">
-<h4 id="orge7fbca4">Safety vs. Freedom</h4>
+<section id="slide-orgeb8195b">
+<h3 id="orgeb8195b">Safety vs. Freedom</h3>
 <aside class="notes">
 <p>
 We begin the discussion with some fundamental corollaries. Let us recognize:
@@ -180,9 +171,10 @@ Each product or effort solidifies limits at the expense of freedoms and enables 
 <b>(Excluding mistakes and bad design)</b>
 </p>
 
+
 </section>
-<section id="slide-orgea606ed">
-<h4 id="orgea606ed">The Structure is Changing</h4>
+<section id="slide-org078a81b">
+<h3 id="org078a81b">The Structure is Changing</h3>
 <aside class="notes">
 <p>
 On top of the complexities of sound and appropriate security design&#x2026;
@@ -195,25 +187,40 @@ From <span class="underline">Monolith to Microservice</span>.
 </p>
 
 <p>
-This is affecting primary security practices.
-</p>
-
-</section>
-<section id="slide-orge1639cd">
-<h4 id="orge1639cd">What is a Monolith?</h4>
-<p>
-A Monolithic Architecture is one where functionally separate software services are interwoven.
+As complexity increases, the benefits of moving left to right increase.
 </p>
 
 <p>
-In the past the practice was to buy hardware and run the full software stack on those machines.
-</p>
-
-<p>
-In many cases we've moved services to the cloud, but frequently the architecture is still monolithic.
+This change is fundamentally affecting primary security practices.
 </p>
 
 <aside class="notes">
+<p>
+When we think about building our systems, instead of putting all features of a system into a process, we should instead break it apart into separate pieces that collaborate with each other. 
+</p>
+
+</aside>
+
+</section>
+<section id="slide-orgf8275dd">
+<h3 id="orgf8275dd">What is a Monolith?</h3>
+<p>
+A <span class="underline">Monolithic Architecture</span> is one where <b>functionally separate software services are interwoven</b>.
+</p>
+
+<p>
+In the Past: Local Hardware.
+</p>
+
+<p>
+Today: More and more moved to cloud, frequently still monolithic. 
+</p>
+
+<aside class="notes">
+<p>
+First - what is a monolith?
+</p>
+
 <p>
 Monolith: the front end, back end database, logic, interfaces with other functions. All local.
 </p>
@@ -221,11 +228,153 @@ Monolith: the front end, back end database, logic, interfaces with other functio
 </aside>
 
 </section>
-<section id="slide-org9bc8136">
-<h4 id="org9bc8136">What are Microservices?</h4>
+<section id="slide-org270adb1">
+<h3 id="org270adb1">What are Microservices?</h3>
+<ul>
+<li>New way to think about structuring applications.</li>
+<li>Moves infrastructure up to the application level.
+<ul>
+<li>Can do infrastructure insertion.</li>
+
+</ul></li>
+<li>Single application as a suite of small services
+<ul>
+<li>Each in its own process</li>
+<li>Communicating with lightweight mechanisms, often via HTTP network API</li>
+<li>Built around business capabilities</li>
+<li>Independently deployable</li>
+
+</ul></li>
+
+</ul>
+<aside class="notes">
+<p>
+Infrastructure insertion: security, debugging, basic operations and management. And can do it in a way that has the deep context of the application.
+</p>
+
+<p>
+We now have this burgeoning growth of services where we nearly have a function coming up.
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org151e7e3">
+<h3 id="org151e7e3">Fowler's Characteristics</h3>
+<ol>
+<li><b>Componentization via services</b></li>
+<li>Organized around business capabilities</li>
+<li>Products not Projects</li>
+<li>Smart endpopints and dump pipes</li>
+<li>Decentralized Governance</li>
+<li>Decentralized Data Management</li>
+<li>Infrastructure Automation</li>
+<li><b>Design for Failure</b></li>
+<li>Evoluationary Design</li>
+
+</ol>
+
 <aside class="notes">
 nil
 </aside>
+
+</section>
+<section id="slide-org3bc7dfd">
+<h3 id="org3bc7dfd">Componentization</h3>
+<ul>
+<li>Independently replacable.</li>
+<li>Independently upgradable.</li>
+
+</ul>
+
+<p>
+Can either do this by software libraries or services.
+</p>
+
+<p>
+In Microservices, we decide to do this as a service.
+</p>
+
+</section>
+<section id="slide-orgde0570b">
+<h3 id="orgde0570b">Design for Failure</h3>
+
+</section>
+<section id="slide-orge55f068">
+<h3 id="orge55f068">Monolith vs. Microservices</h3>
+<div class="column" style="float:left; width: 50%">
+
+<div class="figure">
+<p><img src="./resources/monolithic.png" alt="monolithic.png" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div class="figure">
+<p><img src="./resources/microservices.png" alt="microservices.png" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org1ca455f">
+<h3 id="org1ca455f">Networking</h3>
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>With microservices, what were once interprocess communications become network requests.</li>
+
+<li>There is real distribution cost in this approach: security, increased process time -&gt; async and consistency.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div class="figure">
+<p><img src="./resources/Microservice-network-calls.png" alt="Microservice-network-calls.png" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org3f5486a">
+<h3 id="org3f5486a">Productivity (from Fowler)</h3>
+
+<div class="figure">
+<p><img src="./resources/productivity.png" alt="productivity.png" width="65%" height="65%" />
+</p>
+</div>
+
+<aside class="notes">
+<p>
+The choice between the two is a place with two obvious end-points and some grey in between.
+</p>
+
+<p>
+For 5 people, productivity better with monolith. For 500 people, likely monolith.
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org4cca557">
+<h3 id="org4cca557">Security Implications</h3>
+<p>
+<b>With a monolith</b> - when you break into the monolith one has access to the whole system. Can say anything to the database.
+</p>
+
+<p>
+<b>With a microservces approach</b>, more agility:
+</p>
+<ul>
+<li>Can have some parts high-security risk and some low-risk.</li>
+<li>Can innovate really quickly in user experience and personalization.</li>
+<li>No need to have whole system with PCI or HIPAA compliance, most of app can be extremely agile and innovative.</li>
+<li>Tight control over narrow attack surface.</li>
+
+</ul>
 </section>
 </section>
 </div>
@@ -249,7 +398,7 @@ overview: true,
 
 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
-transitionSpeed: 'default',
+transitionSpeed: 'slow',
 multiplex: {
     secret: '', // null if client
     id: '', // id, obtained from socket.io server

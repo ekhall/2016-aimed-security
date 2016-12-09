@@ -1,6 +1,7 @@
 #+REVEAL_ROOT: ./reveal.js
 #+REVEAL_TRANS: linear
-#+REVEAL_THEME: blood
+#+REVEAL_SPEED: slow
+#+REVEAL_THEME: night
 #+REVEAL_PLUGINS: notes:t
 #+OPTIONS: reveal_title_slide:nil toc:nil num:nil
 
@@ -19,8 +20,7 @@ Founder, Archetyp Mobility
 
 www.archetyp.io
 
-*** This Stuff is Real
-Data Breaches are Real. 
+** Data Breaches are Very Real
  
 The last 12 months have seen significant breaches.
 
@@ -28,15 +28,15 @@ The last 12 months have seen significant breaches.
 Hardly necessary to start with this.
 #+END_NOTES
 
-*** 2016 ICIT Report (1/2)
+** 2016 ICIT Report (1/2)
 /"Despite being the most at-risk and perpetually breached critical infrastructure sector in the Nation, virtually all health sector organizations refuse to evolve their layered security to combat a hyper evolving threat landscape..."/ 
 
-*** 2016 ICIT Report (2/2)
+** 2016 ICIT Report (2/2)
 /"As a result, when a healthcare system is breached and patient records are stolen, the entire brutal impact of the incident that resulted from poor cybersecurity on behalf of the healthcare organization is forced onto the shoulders of the victim to deal with for the rest of their life."/
 
 - 2016, Institute for Critical Infrastructure Technology
 
-*** 2016 # Breaches with PHI or Health Info
+** 2016 # Breaches with PHI or Health Info
 #+ATTR_HTML: :width 65% :height 65%
 [[./resources/2016-incidents-phi-healthinfo.png]]
 
@@ -47,27 +47,27 @@ Hardly necessary to start with this.
 2. There were a greater number of breaches in the second half of 2016 than the first.  Avg 25/mo vs 36.
 #+END_NOTES
 
-*** 2016 # of Records Breached
+** 2016 # of Records Breached
 #+ATTR_HTML: :width 65% :height 65%
 [[./resources/2016-records-breached.png]]
 
 (from Protenus.com)
 
-*** Notable Breaches this Year
-WADA cracked by Russian Espionage Group 'Fancy Bear', includes Olympic Athletes.
+** Notable Breaches this Year
+- WADA cracked by Russian Espionage Group 'Fancy Bear', includes Olympic Athletes.
 
-Tunisian government inserted keyloggers between users and Facebook.
+- Tunisian government inserted keyloggers between users and Facebook.
 
-(2014) We discovered 500m Yahoo records stolen in 2014 by suspected Nation State.
+- (2014) We discovered 500m Yahoo records stolen in 2014 by suspected Nation State.
 
-(2012) We discovered 68m Dropbox records hacked in 2012 - only half upgraded.
+- (2012) We discovered 68m Dropbox records hacked in 2012 - only half upgraded.
 
 #+BEGIN_NOTES
 - This year or discovered this year.
 - Dropbox: Half were encrypted with SHA, newer half with Blowfish Bcrypt - important lesson for those of us slowly upgrading services piecemeal.  
 #+END_NOTES
 
-*** Safety vs. Freedom 
+** Safety vs. Freedom 
 #+BEGIN_NOTES
 We begin the discussion with some fundamental corollaries. Let us recognize:
 
@@ -79,29 +79,113 @@ Each product or effort solidifies limits at the expense of freedoms and enables 
 
 *(Excluding mistakes and bad design)*
 
-*** The Structure is Changing   
+
+** The Structure is Changing
 #+BEGIN_NOTES
 On top of the complexities of sound and appropriate security design...
 #+END_NOTES
 
 From _Monolith to Microservice_.
 
+As complexity increases, the benefits of moving left to right increase.
+
 This change is fundamentally affecting primary security practices.
 
-*** What is a Monolith?
-A Monolithic Architecture is one where functionally separate software services are interwoven.
+#+BEGIN_NOTES
+When we think about building our systems, instead of putting all features of a system into a process, we should instead break it apart into separate pieces that collaborate with each other. 
+#+END_NOTES
 
-In the past the practice was to buy hardware and run the full software stack on those machines.
+** What is a Monolith?
+A _Monolithic Architecture_ is one where *functionally separate software services are interwoven*.
 
-In many cases we've moved services to the cloud, but frequently the architecture is still monolithic.
- 
+In the Past: Local Hardware.
+
+Today: More and more moved to cloud, frequently still monolithic. 
+
 #+BEGIN_NOTES
 First - what is a monolith?
 
 Monolith: the front end, back end database, logic, interfaces with other functions. All local.
 #+END_NOTES
 
-*** What are Microservices?
+** What are Microservices?
+- New way to think about structuring applications.
+- Moves infrastructure up to the application level.
+  - Can do infrastructure insertion. 
+- Single application as a suite of small services
+  - Each in its own process
+  - Communicating with lightweight mechanisms, often via HTTP network API
+  - Built around business capabilities
+  - Independently deployable
+#+BEGIN_NOTES
+Infrastructure insertion: security, debugging, basic operations and management. And can do it in a way that has the deep context of the application.
+
+We now have this burgeoning growth of services where we nearly have a function coming up.
+#+END_NOTES
+
+** Fowler's Characteristics
+1. *Componentization via services*
+2. Organized around business capabilities
+3. Products not Projects
+4. Smart endpopints and dump pipes
+5. Decentralized Governance
+6. Decentralized Data Management
+7. Infrastructure Automation
+8. *Design for Failure*
+9. Evoluationary Design
 
 #+BEGIN_NOTES
 #+END_NOTES
+
+** Componentization
+- Independently replacable.
+- Independently upgradable.
+
+Can either do this by software libraries or services.
+
+In Microservices, we decide to do this as a service.
+
+** Design for Failure
+
+#+BEGIN_COMMENT
+https://www.youtube.com/watch?v=Irlw-LGIJO4 at 8 minutes
+#+END_COMMENT
+ 
+** Monolith vs. Microservices
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+[[./resources/monolithic.png]]
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+[[./resources/microservices.png]]
+#+REVEAL_HTML: </div>
+
+** Networking
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+- With microservices, what were once interprocess communications become network requests.
+
+- There is real distribution cost in this approach: security, increased process time -> async and consistency. 
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+[[./resources/Microservice-network-calls.png]]
+#+REVEAL_HTML: </div>
+
+** Productivity (from Fowler)
+#+ATTR_HTML: :width 65% :height 65%
+[[./resources/productivity.png]]
+
+#+BEGIN_NOTES
+The choice between the two is a place with two obvious end-points and some grey in between.
+
+For 5 people, productivity better with monolith. For 500 people, likely monolith.
+#+END_NOTES
+
+** Security Implications
+*With a monolith* - when you break into the monolith one has access to the whole system. Can say anything to the database.
+
+*With a microservces approach*, more agility:
+  - Can have some parts high-security risk and some low-risk.
+  - Can innovate really quickly in user experience and personalization.
+  - No need to have whole system with PCI or HIPAA compliance, most of app can be extremely agile and innovative. 
+  - Tight control over narrow attack surface.
