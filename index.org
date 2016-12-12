@@ -238,7 +238,7 @@ Your security shouldn't /rely/ on your architecture being hidden, but you don't 
 
 ** Graham Lea's Questions (Core)
 1. When your service is called, does it require the calling software to authenticate itself, or does it let anything connect?
-2. Do your services let their callers access all the APIs that a service offers, or just the ones it needs to fulfil its function?
+2. Do your services let their callers access all the APIs that a service offers, or just the ones it needs to fulfill its function?
 3. If an attacker owned a service, could they pretty easily request anything from its downstream services?
 4. What guarantees do you have that a request received from an authenticated user hasn’t been tampered with?
 5. How do you actively identify the private and sensitive data in your database?
