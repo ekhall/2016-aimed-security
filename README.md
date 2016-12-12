@@ -1,7 +1,7 @@
 # AIMed 2016 Cloud Computing and Data Security
 ## Info
 * E. Kevin Hall ([about](https://ekhall.gitlab.io/))
-* Date: 27 November, 2016
+* Date: 12 December, 2016
 
 ## Slides
 View slides here: [https://ekhall.github.io/2016-aimed-security/](https://ekhall.github.io/2016-aimed-security/)
