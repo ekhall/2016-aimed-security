@@ -173,7 +173,7 @@ In Monolithic, we do this by exchanging software libraries.
 
 In Microservices, we decide to do this via independent services. 
 
-Today, can spin up Docker containers for /seconds/. AWS Lambda: the service without the server.
+Today, can one spin up Docker containers in /seconds/. AWS Lambda: the service without the server.
 
 #+BEGIN_NOTES
 Almost to the point of a service being in some cases a single person or small team. Turns out this works out ok: developers who want quiet weekends, don't push out new software on Fridays, etc. Self policing.
