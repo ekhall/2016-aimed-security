@@ -99,29 +99,23 @@ As complexity increases, the benefits of moving left to right increase.
 This change is fundamentally affecting primary security practices.
 
 ** What is a Monolith?
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+
 A _Monolithic Architecture_ is one where *functionally separate software services are interwoven*.
 
-In the Past: Local Hardware.
+_In the Past:_ Local Hardware.
 
-Today: More and more moved to cloud, frequently still monolithic. 
+_Today:_ More and more moved to cloud, frequently still monolithic. 
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+[[./resources/monolithic.png]]
+#+REVEAL_HTML: </div>
 
 #+BEGIN_NOTES
 
 Monolith: the front end, back end database, logic, interfaces with other functions. All local.
-#+END_NOTES
-
-** Complexity vs Productivity 
-#+ATTR_HTML: :width 65% :height 65%
-[[./resources/productivity.png]]
-
-From Martin Fowler
-
-#+BEGIN_NOTES
-The choice between the two is a place with two obvious end-points and some grey in between.
-
-For 5 people, productivity better with monolith. For 500 people, likely microservice approach.
-
-But I would argue there's more at stake here in this graph than developer productivity. Inside the meaning of this graph is the facility of the system to being understood. And the better something is understood, the better is can be secured.
 #+END_NOTES
 
 ** What are Microservices?
@@ -150,6 +144,20 @@ We now have this burgeoning growth of services where we nearly have a function c
 #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
 [[./resources/microservices.png]]
 #+REVEAL_HTML: </div>
+** Complexity vs Productivity 
+#+ATTR_HTML: :width 65% :height 65%
+[[./resources/productivity.png]]
+
+From Martin Fowler
+
+#+BEGIN_NOTES
+The choice between the two is a place with two obvious end-points and some grey in between.
+
+For 5 people, productivity better with monolith. For 500 people, likely microservice approach.
+
+But I would argue there's more at stake here in this graph than developer productivity. Inside the meaning of this graph is the facility of the system to being understood. And the better something is understood, the better is can be secured.
+#+END_NOTES
+
 
 ** Fowler's Characteristics
 1. *_Componentization via services_*
