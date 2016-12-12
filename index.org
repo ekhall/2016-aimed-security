@@ -221,13 +221,15 @@ It's like a code scenario dialed up to 11. Practice failure constantly.
   - Tight control over narrow attack surface.
 
 ** Security Recommendations
-1. Encrypt data in transit and at rest
-2. Automate configuration and policy management
-3. Segment and isolate applications and services
 
 "The enemy knows the system" (Shannon)
 
 Your security shouldn't /rely/ on your architecture being hidden, but you don't need to expose it. (Kerckhoff's Principle)
+
+1. Encrypt data in transit and at rest
+2. Automate configuration and policy management
+3. Segment and isolate applications and services
+
 #+BEGIN_NOTES
 1. Remember, what was once interprocess communication are now network calls. Keep certficates up to date, fix SSL issues, manage software versions well.
 2. Complex functions across disparate systems lead to the most common error: human. Separating development and administrative roles and go long way to reduce errors.
