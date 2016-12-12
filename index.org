@@ -32,7 +32,7 @@ Hardly necessary to start with this.
 /"Despite being the most at-risk and perpetually breached critical infrastructure sector in the Nation, virtually all health sector organizations refuse to evolve their layered security to combat a hyper evolving threat landscape..."/ 
 
 ** 2016 ICIT Report (2/2)
-/"As a result, when a healthcare system is breached and patient records are stolen, the entire brutal impact of the incident that resulted from poor cybersecurity on behalf of the healthcare organization is forced onto the shoulders of the victim to deal with for the rest of their life."/
+/"As a result, when a healthcare system is breached and patient records are stolen, the entire brutal impact ... that resulted from poor cybersecurity ... of the healthcare organization is forced onto the shoulders of the victims to deal with for the rest of their life."/
 
 - 2016, Institute for Critical Infrastructure Technology
 
