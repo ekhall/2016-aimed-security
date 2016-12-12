@@ -180,8 +180,15 @@ Almost to the point of a service being in some cases a single person or small te
 #+END_NOTES
 ** Design for Failure
 
+Design for the principal that things will fail constantly. 
+
+*_Network infrastructure /and/ security._*
+
+Netflix, a company that has openly described great success with their microservices approach, years ago was famous for their "Chaos Monkey" software that routinely breaks their infrastructure.
+
+*It works on the principle that the best way to avoid major failures is to fail constantly.*
 #+BEGIN_COMMENT
-https://www.youtube.com/watch?v=Irlw-LGIJO4 at 8 minutes
+It's like a code scenario dialed up to 11. Practice failure constantly.
 #+END_COMMENT
 
 ** Networking
