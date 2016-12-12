@@ -36,7 +36,7 @@ Hardly necessary to start with this.
 
 - 2016, Institute for Critical Infrastructure Technology
 
-** 2016 # Breaches with PHI or Health Info
+** 2016 # Breaches with Personal Health Info
 #+ATTR_HTML: :width 65% :height 65%
 [[./resources/2016-incidents-phi-healthinfo.png]]
 
@@ -62,6 +62,8 @@ Hardly necessary to start with this.
 
 - (2012) We discovered 68m Dropbox records hacked in 2012 - only half upgraded.
 
+- Reports of breaches of DNC and RNC computers by Russian State.
+
 #+BEGIN_NOTES
 - This year or discovered this year.
 - Dropbox: Half were encrypted with SHA, newer half with Blowfish Bcrypt - important lesson for those of us slowly upgrading services piecemeal.  
@@ -71,18 +73,23 @@ Hardly necessary to start with this.
 #+BEGIN_NOTES
 We begin the discussion with some fundamental corollaries. Let us recognize:
 
+With human nature, the tendency is to think that if we keep our records in a locked box inside the firewalls of our hospital or medical practice, we're safe. That may not be - the security surface area of tens of thousands of individual EHRs rely on a wide range of quality in security best practices. They rely on each individual "pot" of data being small enough to be "not worth it".
 #+END_NOTES
+
+/(Excluding mistakes and bad design...)/
 
 Every discussion of security eventually boils down to balance between security and freedom.
 
 Each product or effort solidifies limits at the expense of freedoms and enables freedoms at the expense of limits. 
 
-*(Excluding mistakes and bad design)*
+Tendency in healthcare is to bias that lean towards security and limits.
 
 
 ** The Structure is Changing
 #+BEGIN_NOTES
 On top of the complexities of sound and appropriate security design...
+
+When we think about building our systems, instead of putting all features of a system into a process, we should instead break it apart into separate pieces that collaborate with each other. 
 #+END_NOTES
 
 From _Monolith to Microservice_.
@@ -90,10 +97,6 @@ From _Monolith to Microservice_.
 As complexity increases, the benefits of moving left to right increase.
 
 This change is fundamentally affecting primary security practices.
-
-#+BEGIN_NOTES
-When we think about building our systems, instead of putting all features of a system into a process, we should instead break it apart into separate pieces that collaborate with each other. 
-#+END_NOTES
 
 ** What is a Monolith?
 A _Monolithic Architecture_ is one where *functionally separate software services are interwoven*.
@@ -103,54 +106,42 @@ In the Past: Local Hardware.
 Today: More and more moved to cloud, frequently still monolithic. 
 
 #+BEGIN_NOTES
-First - what is a monolith?
 
 Monolith: the front end, back end database, logic, interfaces with other functions. All local.
 #+END_NOTES
 
+** Complexity vs Productivity 
+#+ATTR_HTML: :width 65% :height 65%
+[[./resources/productivity.png]]
+
+From Martin Fowler
+
+#+BEGIN_NOTES
+The choice between the two is a place with two obvious end-points and some grey in between.
+
+For 5 people, productivity better with monolith. For 500 people, likely microservice approach.
+
+But I would argue there's more at stake here in this graph than developer productivity. Inside the meaning of this graph is the facility of the system to being understood. And the better something is understood, the better is can be secured.
+#+END_NOTES
+
 ** What are Microservices?
-- New way to think about structuring applications.
-- Moves infrastructure up to the application level.
+- "New" way to think about structuring applications.
+- _Moves infrastructure up to the application level._
   - Can do infrastructure insertion. 
 - Single application as a suite of small services
   - Each in its own process
   - Communicating with lightweight mechanisms, often via HTTP network API
   - Built around business capabilities
   - Independently deployable
+
 #+BEGIN_NOTES
 Infrastructure insertion: security, debugging, basic operations and management. And can do it in a way that has the deep context of the application.
+
+Communicating: SOA in the past, didn't work, network, computers slower, passing around relatively large blobs of XML.
 
 We now have this burgeoning growth of services where we nearly have a function coming up.
 #+END_NOTES
 
-** Fowler's Characteristics
-1. *Componentization via services*
-2. Organized around business capabilities
-3. Products not Projects
-4. Smart endpopints and dump pipes
-5. Decentralized Governance
-6. Decentralized Data Management
-7. Infrastructure Automation
-8. *Design for Failure*
-9. Evoluationary Design
-
-#+BEGIN_NOTES
-#+END_NOTES
-
-** Componentization
-- Independently replacable.
-- Independently upgradable.
-
-Can either do this by software libraries or services.
-
-In Microservices, we decide to do this as a service.
-
-** Design for Failure
-
-#+BEGIN_COMMENT
-https://www.youtube.com/watch?v=Irlw-LGIJO4 at 8 minutes
-#+END_COMMENT
- 
 ** Monolith vs. Microservices
 #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
 [[./resources/monolithic.png]]
@@ -159,6 +150,39 @@ https://www.youtube.com/watch?v=Irlw-LGIJO4 at 8 minutes
 #+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
 [[./resources/microservices.png]]
 #+REVEAL_HTML: </div>
+
+** Fowler's Characteristics
+1. *_Componentization via services_*
+2. Organized around business capabilities
+3. Products not Projects
+4. Smart endpopints and dump pipes
+5. Decentralized Governance
+6. Decentralized Data Management
+7. Infrastructure Automation
+8. *_Design for Failure_*
+9. Evolutionary Design
+
+#+BEGIN_NOTES
+#+END_NOTES
+
+** Componentization
+- Independently replacable.
+- Independently upgradable.
+
+In Monolithic, we do this by exchanging software libraries.
+
+In Microservices, we decide to do this via independent services. 
+
+Today, can spin up Docker containers for /seconds/. AWS Lambda: the service without the server.
+
+#+BEGIN_NOTES
+Almost to the point of a service being in some cases a single person or small team. Turns out this works out ok: developers who want quiet weekends, don't push out new software on Fridays, etc. Self policing.
+#+END_NOTES
+** Design for Failure
+
+#+BEGIN_COMMENT
+https://www.youtube.com/watch?v=Irlw-LGIJO4 at 8 minutes
+#+END_COMMENT
 
 ** Networking
 #+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
@@ -171,15 +195,6 @@ https://www.youtube.com/watch?v=Irlw-LGIJO4 at 8 minutes
 [[./resources/Microservice-network-calls.png]]
 #+REVEAL_HTML: </div>
 
-** Productivity (from Fowler)
-#+ATTR_HTML: :width 65% :height 65%
-[[./resources/productivity.png]]
-
-#+BEGIN_NOTES
-The choice between the two is a place with two obvious end-points and some grey in between.
-
-For 5 people, productivity better with monolith. For 500 people, likely monolith.
-#+END_NOTES
 
 ** Security Implications
 *With a monolith* - a security breach into the monolith one has access to the whole system. Can say anything to the database.
@@ -187,7 +202,7 @@ For 5 people, productivity better with monolith. For 500 people, likely monolith
 *With a microservces approach*, more agility:
   - Can have some parts high-security risk and some low-risk.
   - Can innovate really quickly in user experience and personalization.
-  - No need to have whole system with PCI or HIPAA compliance, most of app can be extremely agile and innovative. 
+  - No need to have whole system with HIPAA compliance, most of app can be extremely agile and innovative. 
   - Tight control over narrow attack surface.
 
 ** Security Recommendations
@@ -195,16 +210,14 @@ For 5 people, productivity better with monolith. For 500 people, likely monolith
 2. Automate configuration and policy management
 3. Segment and isolate applications and services
 
+"The enemy knows the system" (Shannon)
+
+Your security shouldn't /rely/ on your architecture being hidden, but you don't need to expose it. (Kerckhoff's Principle)
 #+BEGIN_NOTES
 1. Remember, what was once interprocess communication are now network calls. Keep certficates up to date, fix SSL issues, manage software versions well.
 2. Complex functions across disparate systems lead to the most common error: human. Separating development and administrative roles and go long way to reduce errors.
 3. Most will isolate dev from prod, but can also govern interactions between services.
 #+END_NOTES
-
-** Kerckhoff's Principle
-"The enemy knows the system" (Shannon)
-
-Your security shoun'd /rely/ on your architecture being hidden, but you don't need to expose it.
 
 ** Graham Lea's Questions (Core)
 

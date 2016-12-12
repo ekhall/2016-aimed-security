@@ -28,8 +28,8 @@
 <div class="slides">
 
 <section>
-<section id="slide-org2aa249e">
-<h2 id="org2aa249e">Monolithic to Microservice</h2>
+<section id="slide-orgcddc31f">
+<h2 id="orgcddc31f">Monolithic to Microservice</h2>
 <p>
 Cloud Computing and Data Security,
 AIMed 2016
@@ -48,8 +48,8 @@ Yale University
 </p>
 
 </section>
-<section id="slide-org3297543">
-<h3 id="org3297543">Disclosure</h3>
+<section id="slide-orgcfe4971">
+<h3 id="orgcfe4971">Disclosure</h3>
 <p>
 Founder, Archetyp Mobility
 </p>
@@ -59,8 +59,8 @@ www.archetyp.io
 </p>
 
 </section>
-<section id="slide-orgbd8c977">
-<h3 id="orgbd8c977">Data Breaches are Very Real</h3>
+<section id="slide-orgfa1e3ae">
+<h3 id="orgfa1e3ae">Data Breaches are Very Real</h3>
 <p>
 The last 12 months have seen significant breaches.
 </p>
@@ -73,15 +73,15 @@ Hardly necessary to start with this.
 </aside>
 
 </section>
-<section id="slide-org3d962c2">
-<h3 id="org3d962c2">2016 ICIT Report (1/2)</h3>
+<section id="slide-org863d820">
+<h3 id="org863d820">2016 ICIT Report (1/2)</h3>
 <p>
 <i>"Despite being the most at-risk and perpetually breached critical infrastructure sector in the Nation, virtually all health sector organizations refuse to evolve their layered security to combat a hyper evolving threat landscape&#x2026;"</i> 
 </p>
 
 </section>
-<section id="slide-org72d3f11">
-<h3 id="org72d3f11">2016 ICIT Report (2/2)</h3>
+<section id="slide-org77ac8c7">
+<h3 id="org77ac8c7">2016 ICIT Report (2/2)</h3>
 <p>
 <i>"As a result, when a healthcare system is breached and patient records are stolen, the entire brutal impact of the incident that resulted from poor cybersecurity on behalf of the healthcare organization is forced onto the shoulders of the victim to deal with for the rest of their life."</i>
 </p>
@@ -92,8 +92,8 @@ Hardly necessary to start with this.
 </ul>
 
 </section>
-<section id="slide-org5d944f8">
-<h3 id="org5d944f8">2016 # Breaches with PHI or Health Info</h3>
+<section id="slide-orgdb6c401">
+<h3 id="orgdb6c401">2016 # Breaches with Personal Health Info</h3>
 
 <div class="figure">
 <p><img src="./resources/2016-incidents-phi-healthinfo.png" alt="2016-incidents-phi-healthinfo.png" width="65%" height="65%" />
@@ -114,8 +114,8 @@ Hardly necessary to start with this.
 </aside>
 
 </section>
-<section id="slide-org8786bd7">
-<h3 id="org8786bd7">2016 # of Records Breached</h3>
+<section id="slide-orga6097ed">
+<h3 id="orga6097ed">2016 # of Records Breached</h3>
 
 <div class="figure">
 <p><img src="./resources/2016-records-breached.png" alt="2016-records-breached.png" width="65%" height="65%" />
@@ -127,8 +127,8 @@ Hardly necessary to start with this.
 </p>
 
 </section>
-<section id="slide-org194c763">
-<h3 id="org194c763">Notable Breaches this Year</h3>
+<section id="slide-orgd9b4ba1">
+<h3 id="orgd9b4ba1">Notable Breaches this Year</h3>
 <ul>
 <li>WADA cracked by Russian Espionage Group 'Fancy Bear', includes Olympic Athletes.</li>
 
@@ -137,6 +137,8 @@ Hardly necessary to start with this.
 <li>(2014) We discovered 500m Yahoo records stolen in 2014 by suspected Nation State.</li>
 
 <li>(2012) We discovered 68m Dropbox records hacked in 2012 - only half upgraded.</li>
+
+<li>Reports of breaches of DNC and RNC computers by Russian State.</li>
 
 </ul>
 
@@ -150,14 +152,22 @@ Hardly necessary to start with this.
 </aside>
 
 </section>
-<section id="slide-org40780bb">
-<h3 id="org40780bb">Safety vs. Freedom</h3>
+<section id="slide-org53dd66c">
+<h3 id="org53dd66c">Safety vs. Freedom</h3>
 <aside class="notes">
 <p>
 We begin the discussion with some fundamental corollaries. Let us recognize:
 </p>
 
+<p>
+With human nature, the tendency is to think that if we keep our records in a locked box inside the firewalls of our hospital or medical practice, we're safe. That may not be - the security surface area of tens of thousands of individual EHRs rely on a wide range of quality in security best practices. They rely on each individual "pot" of data being small enough to be "not worth it".
+</p>
+
 </aside>
+
+<p>
+<i>(Excluding mistakes and bad design&#x2026;)</i>
+</p>
 
 <p>
 Every discussion of security eventually boils down to balance between security and freedom.
@@ -168,16 +178,20 @@ Each product or effort solidifies limits at the expense of freedoms and enables 
 </p>
 
 <p>
-<b>(Excluding mistakes and bad design)</b>
+Tendency in healthcare is to bias that lean towards security and limits.
 </p>
 
 
 </section>
-<section id="slide-orgc03431d">
-<h3 id="orgc03431d">The Structure is Changing</h3>
+<section id="slide-orga7a64bc">
+<h3 id="orga7a64bc">The Structure is Changing</h3>
 <aside class="notes">
 <p>
 On top of the complexities of sound and appropriate security design&#x2026;
+</p>
+
+<p>
+When we think about building our systems, instead of putting all features of a system into a process, we should instead break it apart into separate pieces that collaborate with each other. 
 </p>
 
 </aside>
@@ -194,16 +208,9 @@ As complexity increases, the benefits of moving left to right increase.
 This change is fundamentally affecting primary security practices.
 </p>
 
-<aside class="notes">
-<p>
-When we think about building our systems, instead of putting all features of a system into a process, we should instead break it apart into separate pieces that collaborate with each other. 
-</p>
-
-</aside>
-
 </section>
-<section id="slide-org34d9cbf">
-<h3 id="org34d9cbf">What is a Monolith?</h3>
+<section id="slide-orgec994ee">
+<h3 id="orgec994ee">What is a Monolith?</h3>
 <p>
 A <span class="underline">Monolithic Architecture</span> is one where <b>functionally separate software services are interwoven</b>.
 </p>
@@ -218,7 +225,7 @@ Today: More and more moved to cloud, frequently still monolithic.
 
 <aside class="notes">
 <p>
-First - what is a monolith?
+
 </p>
 
 <p>
@@ -228,11 +235,39 @@ Monolith: the front end, back end database, logic, interfaces with other functio
 </aside>
 
 </section>
-<section id="slide-orgc6ec93b">
-<h3 id="orgc6ec93b">What are Microservices?</h3>
+<section id="slide-orgc21f264">
+<h3 id="orgc21f264">Complexity vs Productivity</h3>
+
+<div class="figure">
+<p><img src="./resources/productivity.png" alt="productivity.png" width="65%" height="65%" />
+</p>
+</div>
+
+<p>
+From Martin Fowler
+</p>
+
+<aside class="notes">
+<p>
+The choice between the two is a place with two obvious end-points and some grey in between.
+</p>
+
+<p>
+For 5 people, productivity better with monolith. For 500 people, likely microservice approach.
+</p>
+
+<p>
+But I would argue there's more at stake here in this graph than developer productivity. Inside the meaning of this graph is the facility of the system to being understood. And the better something is understood, the better is can be secured.
+</p>
+
+</aside>
+
+</section>
+<section id="slide-org5f9681c">
+<h3 id="org5f9681c">What are Microservices?</h3>
 <ul>
-<li>New way to think about structuring applications.</li>
-<li>Moves infrastructure up to the application level.
+<li>"New" way to think about structuring applications.</li>
+<li><span class="underline">Moves infrastructure up to the application level.</span>
 <ul>
 <li>Can do infrastructure insertion.</li>
 
@@ -247,9 +282,14 @@ Monolith: the front end, back end database, logic, interfaces with other functio
 </ul></li>
 
 </ul>
+
 <aside class="notes">
 <p>
 Infrastructure insertion: security, debugging, basic operations and management. And can do it in a way that has the deep context of the application.
+</p>
+
+<p>
+Communicating: SOA in the past, didn't work, network, computers slower, passing around relatively large blobs of XML.
 </p>
 
 <p>
@@ -259,49 +299,8 @@ We now have this burgeoning growth of services where we nearly have a function c
 </aside>
 
 </section>
-<section id="slide-org4a41f2e">
-<h3 id="org4a41f2e">Fowler's Characteristics</h3>
-<ol>
-<li><b>Componentization via services</b></li>
-<li>Organized around business capabilities</li>
-<li>Products not Projects</li>
-<li>Smart endpopints and dump pipes</li>
-<li>Decentralized Governance</li>
-<li>Decentralized Data Management</li>
-<li>Infrastructure Automation</li>
-<li><b>Design for Failure</b></li>
-<li>Evoluationary Design</li>
-
-</ol>
-
-<aside class="notes">
-nil
-</aside>
-
-</section>
-<section id="slide-org1fbe341">
-<h3 id="org1fbe341">Componentization</h3>
-<ul>
-<li>Independently replacable.</li>
-<li>Independently upgradable.</li>
-
-</ul>
-
-<p>
-Can either do this by software libraries or services.
-</p>
-
-<p>
-In Microservices, we decide to do this as a service.
-</p>
-
-</section>
-<section id="slide-orgcb417be">
-<h3 id="orgcb417be">Design for Failure</h3>
-
-</section>
-<section id="slide-org2e1b7a0">
-<h3 id="org2e1b7a0">Monolith vs. Microservices</h3>
+<section id="slide-orge383669">
+<h3 id="orge383669">Monolith vs. Microservices</h3>
 <div class="column" style="float:left; width: 50%">
 
 <div class="figure">
@@ -319,8 +318,59 @@ In Microservices, we decide to do this as a service.
 </div>
 
 </section>
-<section id="slide-org33f067e">
-<h3 id="org33f067e">Networking</h3>
+<section id="slide-orgaa4bae6">
+<h3 id="orgaa4bae6">Fowler's Characteristics</h3>
+<ol>
+<li><b><span class="underline">Componentization via services</span></b></li>
+<li>Organized around business capabilities</li>
+<li>Products not Projects</li>
+<li>Smart endpopints and dump pipes</li>
+<li>Decentralized Governance</li>
+<li>Decentralized Data Management</li>
+<li>Infrastructure Automation</li>
+<li><b><span class="underline">Design for Failure</span></b></li>
+<li>Evolutionary Design</li>
+
+</ol>
+
+<aside class="notes">
+nil
+</aside>
+
+</section>
+<section id="slide-org1922f8d">
+<h3 id="org1922f8d">Componentization</h3>
+<ul>
+<li>Independently replacable.</li>
+<li>Independently upgradable.</li>
+
+</ul>
+
+<p>
+In Monolithic, we do this by exchanging software libraries.
+</p>
+
+<p>
+In Microservices, we decide to do this via independent services. 
+</p>
+
+<p>
+Today, can spin up Docker containers for <i>seconds</i>. AWS Lambda: the service without the server.
+</p>
+
+<aside class="notes">
+<p>
+Almost to the point of a service being in some cases a single person or small team. Turns out this works out ok: developers who want quiet weekends, don't push out new software on Fridays, etc. Self policing.
+</p>
+
+</aside>
+</section>
+<section id="slide-org8f4b1de">
+<h3 id="org8f4b1de">Design for Failure</h3>
+
+</section>
+<section id="slide-org4d9a837">
+<h3 id="org4d9a837">Networking</h3>
 <div class="column" style="float:left; width: 50%">
 <ul>
 <li>With microservices, what were once interprocess communications become network requests.</li>
@@ -338,29 +388,10 @@ In Microservices, we decide to do this as a service.
 </div>
 </div>
 
-</section>
-<section id="slide-orgbf15e36">
-<h3 id="orgbf15e36">Productivity (from Fowler)</h3>
-
-<div class="figure">
-<p><img src="./resources/productivity.png" alt="productivity.png" width="65%" height="65%" />
-</p>
-</div>
-
-<aside class="notes">
-<p>
-The choice between the two is a place with two obvious end-points and some grey in between.
-</p>
-
-<p>
-For 5 people, productivity better with monolith. For 500 people, likely monolith.
-</p>
-
-</aside>
 
 </section>
-<section id="slide-orgfe29c71">
-<h3 id="orgfe29c71">Security Implications</h3>
+<section id="slide-org5e0755a">
+<h3 id="org5e0755a">Security Implications</h3>
 <p>
 <b>With a monolith</b> - a security breach into the monolith one has access to the whole system. Can say anything to the database.
 </p>
@@ -371,14 +402,14 @@ For 5 people, productivity better with monolith. For 500 people, likely monolith
 <ul>
 <li>Can have some parts high-security risk and some low-risk.</li>
 <li>Can innovate really quickly in user experience and personalization.</li>
-<li>No need to have whole system with PCI or HIPAA compliance, most of app can be extremely agile and innovative.</li>
+<li>No need to have whole system with HIPAA compliance, most of app can be extremely agile and innovative.</li>
 <li>Tight control over narrow attack surface.</li>
 
 </ul>
 
 </section>
-<section id="slide-org468689a">
-<h3 id="org468689a">Security Recommendations</h3>
+<section id="slide-org56f40d1">
+<h3 id="org56f40d1">Security Recommendations</h3>
 <ol>
 <li>Encrypt data in transit and at rest</li>
 <li>Automate configuration and policy management</li>
@@ -386,6 +417,13 @@ For 5 people, productivity better with monolith. For 500 people, likely monolith
 
 </ol>
 
+<p>
+"The enemy knows the system" (Shannon)
+</p>
+
+<p>
+Your security shouldn't <i>rely</i> on your architecture being hidden, but you don't need to expose it. (Kerckhoff's Principle)
+</p>
 <aside class="notes">
 <ol>
 <li>Remember, what was once interprocess communication are now network calls. Keep certficates up to date, fix SSL issues, manage software versions well.</li>
@@ -397,23 +435,27 @@ For 5 people, productivity better with monolith. For 500 people, likely monolith
 </aside>
 
 </section>
-<section id="slide-org063001a">
-<h3 id="org063001a">Kerckhoff's Principle</h3>
-<p>
-"The enemy knows the system" (Shannon)
-</p>
-
-<p>
-Your security shoun'd <i>rely</i> on your architecture being hidden, but you don't need to expose it.
-</p>
+<section id="slide-org370d9cc">
+<h3 id="org370d9cc">Kerckhoff's Principle</h3>
 
 </section>
-<section id="slide-org737666d">
-<h3 id="org737666d">Resources</h3>
+<section id="slide-orgdb8eb48">
+<h3 id="orgdb8eb48">Graham Lea's Questions (Core)</h3>
+<aside class="notes">
+<p>
+<a href="http://www.grahamlea.com/2015/07/microservices-security-questions/">http://www.grahamlea.com/2015/07/microservices-security-questions/</a>
+</p>
+
+</aside>
+
+</section>
+<section id="slide-orgb090b85">
+<h3 id="orgb090b85">Resources</h3>
 <div class="column" style="float:left; width: 50%">
 <ul>
 <li>Netflix: <a href="http://techblog.netflix.com/search/label/security">http://techblog.netflix.com/search/label/security</a></li>
 <li>Sam Newman: Building Microservices, O'Reilly</li>
+<li>Troy Hunt Blog: <a href="https://www.troyhunt.com">https://www.troyhunt.com</a></li>
 
 </ul>
 </div>
